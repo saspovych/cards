@@ -1,30 +1,67 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+	<div>
+		<nav>
+			<ul>
+				<li><router-link to="/">Настройки</router-link></li>
+				<li><router-link to="/cards">Карточки</router-link></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<router-view></router-view>
+		</div>
+	</div>
 </template>
 
+<script>
+	export default {
+		data() {
+			return {
+
+			}
+		}
+	}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: black;
 }
 
 nav {
-  padding: 30px;
+	padding: 25px 50px;
+
+	background-color: lightgray;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+ul {
+	display: flex;
+
+	list-style: none;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+li {
+	margin-right: 25px;
+
+	font-size: 24px;
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+
+.router-link-active {
+	color: black;
+}
+
+.wrapper {
+	padding: 25px 75px;
 }
 </style>
